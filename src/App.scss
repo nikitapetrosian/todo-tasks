@@ -1,0 +1,115 @@
+@import "./vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-color;
+  color: $text-df;
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//@at-root
+
+.tox-tinymce {
+  border: 2px solid $border-color !important;
+}
+
+.tox-statusbar {
+  display: none !important;
+}
+
+.tox-editor-container {
+  background: $card-color !important;
+}
+.tox-editor-header {
+  border: 1px solid $border-color;
+}
+
+.tox .tox-toolbar-overlord {
+  background-color: $card-color !important;
+}
+
+.tox .tox-edit-area__iframe {
+  background-color: rgb(87, 87, 87) !important;
+}
+
+.mce-content-body {
+  color: white !important;
+}
+
+.projects {
+  & form{
+    display: flex;
+    width: fit-content;
+  }
+  &__form {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: $card-color;
+    padding: 0 30px;
+    justify-content: space-between;
+    input {
+      height: 35px;
+      font-size: 14px;
+      // width: 300px;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      padding: 0 10px;
+      outline: none;
+      background: $bg-color;
+      color: $text-df;
+      &:focus {
+        border-color: $borderHover-color;
+      }
+    }
+    button {
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      padding: 0 10px;
+      outline: none;
+      background: $bg-color;
+      color: $text-df;
+      height: 35px;
+      margin-left: 20px;
+      &:focus {
+        border-color: $borderHover-color;
+      }
+      &:hover {
+        color: $text-secondary;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
